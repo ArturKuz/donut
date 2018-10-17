@@ -1,0 +1,99 @@
+.page-header {
+  outline: 2px solid red;
+  //min-height: 965px;
+
+  display: $grid;
+  grid-template-columns: $grid_columns ;
+  grid-template-rows: 60px 55px 245px 360px 245px;
+  //grid-template-rows: 60px 55px auto auto auto;
+  margin: $center;
+  max-width: $page_width;
+  background: $yellow;
+  border: $border-transparetnt;
+
+  &__nav{
+    grid-row: 2;
+    grid-column: 2 / 8;
+  }
+  &__nav_decor {
+    font: $text_menu;
+    text-transform: $text_up;
+    letter-spacing: $letter_space_menu;
+  }
+  &__nav-link{
+    margin: .4% 0;
+    padding: .5% 2.5%;
+    display: $inline-block;
+  }
+  &__nav-link_decor{
+    color:$black;
+    border-radius: $nav-item-radius;
+  }
+  &__nav-link_decor:hover{
+    color:$yellow;
+    background: $black;
+  }
+  &__title {
+    grid-row: 3;
+    grid-column: 4 /10;
+    text-align: $text-center;
+  }
+  &__title-text{
+    font: $text_title;
+    margin: 10% 10% 8%;
+  }
+  &__title-img{
+    display: $block;
+    margin: 7.5% auto;
+  }
+  &__title-button{
+    margin: 2rem;
+    position: $relative;
+    background: $yellow_light;
+
+  }
+  &__title-button:before{
+    content: "";
+    position: absolute;
+    width: 200%;
+    border-top: 4px solid #000;
+    top: 29%;
+    left: -60%;
+  }
+
+  &__logo{
+
+    grid-row: 4;
+    grid-column: 2 / 5;
+    padding-top: 7%;
+  }
+  .carousel{
+    margin-top: 30%;
+    margin-left: 5%;
+    grid-row: 3/5;
+    grid-column: 9/12;
+    width: 110%;
+  }
+  .carousel-indicators {
+    right: -115%;
+    bottom: 50%;
+    transform: rotate(90deg);
+  }
+  .carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+  }
+  &__scroll {
+    grid-row: 5;
+    grid-column: 6/8;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &__scroll-item{
+    line-height: 2.5rem;
+  }
+
+}
